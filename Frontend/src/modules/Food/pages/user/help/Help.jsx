@@ -406,10 +406,10 @@ export default function Help() {
                       We'll respond within 24 hours
                     </p>
                     <a
-                      href="mailto:support@foodelo.com"
+                      href="mailto:support@Tiffinji.com"
                       className="text-sm text-primary hover:underline font-medium"
                     >
-                      support@foodelo.com
+                      support@Tiffinji.com
                     </a>
                   </div>
                 </div>

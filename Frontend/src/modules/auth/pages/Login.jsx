@@ -5,7 +5,7 @@ import { Phone, ArrowRight, ShieldCheck, Loader2, Utensils, Star, Heart, ShieldQ
 import { toast } from "sonner"
 import { authAPI, userAPI } from "@food/api"
 import { setAuthData } from "@food/utils/auth"
-import logoNew from "@/assets/logo.png"
+import logoNew from "@/assets/Tiffin_logo.png"
 import {
   Dialog,
   DialogContent,
@@ -244,19 +244,19 @@ export default function UnifiedOTPFastLogin() {
     return `${String(mins).padStart(2, "0")}:${String(secs).padStart(2, "0")}`
   }
 
-  const primaryColor = "#7e3866" // Rebranded Plum color
+  const primaryColor = "#D51F10" // Rebranded brand color
 
   return (
     <div className="min-h-screen bg-white dark:bg-[#0a0a0a] flex flex-col relative overflow-hidden font-['Poppins']">
       {/* Decorative Background Elements */}
-      <div className="absolute top-0 left-0 w-full h-[600px] bg-gradient-to-b from-[#7e3866]/10 via-[#7e3866]/5 to-transparent pointer-events-none" />
-      <div className="absolute top-[-100px] right-[-100px] w-[500px] h-[500px] bg-[#7e3866]/5 rounded-full blur-[120px] pointer-events-none animate-pulse" />
-      <div className="absolute bottom-[-100px] left-[-100px] w-[400px] h-[400px] bg-[#7e3866]/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 left-0 w-full h-[600px] bg-gradient-to-b from-[#D51F10]/10 via-[#D51F10]/5 to-transparent pointer-events-none" />
+      <div className="absolute top-[-100px] right-[-100px] w-[500px] h-[500px] bg-[#D51F10]/5 rounded-full blur-[120px] pointer-events-none animate-pulse" />
+      <div className="absolute bottom-[-100px] left-[-100px] w-[400px] h-[400px] bg-[#D51F10]/5 rounded-full blur-[120px] pointer-events-none" />
 
       {/* Main Content */}
       <div className="absolute top-6 right-6 z-20">
         <Link to="/user/auth/support">
-          <Button variant="ghost" className="text-gray-500 hover:text-[#7e3866] font-semibold flex items-center gap-2">
+          <Button variant="ghost" className="text-gray-500 hover:text-[#D51F10] font-semibold flex items-center gap-2">
             <ShieldQuestion className="w-5 h-5" />
             Support
           </Button>
@@ -280,7 +280,7 @@ export default function UnifiedOTPFastLogin() {
             >
               <img 
                 src={logoNew} 
-                alt="Foodelo Logo" 
+                alt="Tiffinji Logo" 
                 className="w-40 h-40 md:w-48 md:h-48 object-contain mx-auto"
               />
             </motion.div>
@@ -296,14 +296,14 @@ export default function UnifiedOTPFastLogin() {
           </div>
 
           {/* Login Card */}
-          <div className="bg-white/80 dark:bg-[#1a1a1a]/80 backdrop-blur-2xl rounded-[3rem] p-8 sm:p-12 shadow-[0_40px_80px_-20px_rgba(126,56,102,0.2)] dark:shadow-none border border-white/20 dark:border-gray-800 relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-[#7e3866]/20 to-transparent" />
+          <div className="bg-white/80 dark:bg-[#1a1a1a]/80 backdrop-blur-2xl rounded-[3rem] p-8 sm:p-12 shadow-[0_40px_80px_-20px_rgba(213,31,16,0.2)] dark:shadow-none border border-white/20 dark:border-gray-800 relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-[#D51F10]/20 to-transparent" />
 
             <div className="mb-10 text-center sm:text-left">
               <h2 className="text-3xl font-black text-gray-900 dark:text-white mb-2 font-['Outfit'] tracking-tight">
                 {step === 1 ? "Welcome Back" : "Security Check"}
               </h2>
-              <div className="h-1 w-10 bg-[#7e3866] rounded-full mb-3 hidden sm:block" />
+              <div className="h-1 w-10 bg-[#D51F10] rounded-full mb-3 hidden sm:block" />
               <p className="text-base text-gray-500 dark:text-gray-400 font-medium">
                 {step === 1
                   ? "Enter your details to access your account"
@@ -323,7 +323,7 @@ export default function UnifiedOTPFastLogin() {
                 >
                   <div className="relative group">
                     <div className="absolute inset-y-0 left-5 flex items-center pointer-events-none">
-                      <span className="text-sm font-bold text-[#7e3866] border-r border-gray-200 dark:border-gray-800 pr-3">+91</span>
+                      <span className="text-sm font-bold text-[#D51F10] border-r border-gray-200 dark:border-gray-800 pr-3">+91</span>
                     </div>
                     <input
                       type="tel"
@@ -332,7 +332,7 @@ export default function UnifiedOTPFastLogin() {
                       value={phoneNumber}
                       onChange={(e) => setPhoneNumber(e.target.value.replace(/\D/g, "").slice(0, 10))}
                       maxLength={10}
-                      className="block w-full pl-16 pr-6 py-4 bg-gray-50 dark:bg-gray-900/50 text-gray-900 dark:text-white border-2 border-transparent focus:border-[#7e3866]/50 rounded-2xl outline-none transition-all placeholder:text-gray-300 font-bold text-lg shadow-sm"
+                      className="block w-full pl-16 pr-6 py-4 bg-gray-50 dark:bg-gray-900/50 text-gray-900 dark:text-white border-2 border-transparent focus:border-[#D51F10]/50 rounded-2xl outline-none transition-all placeholder:text-gray-300 font-bold text-lg shadow-sm"
                       placeholder="Phone number"
                     />
                   </div>
@@ -340,7 +340,7 @@ export default function UnifiedOTPFastLogin() {
                   <button
                     type="submit"
                     disabled={loading || phoneNumber.length < 10}
-                    className="w-full py-4.5 bg-[#7e3866] hover:bg-[#6a2f56] disabled:bg-gray-200 dark:disabled:bg-gray-800 disabled:text-gray-400 text-white rounded-2xl font-bold text-lg shadow-xl shadow-[#7e3866]/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2 group overflow-hidden relative"
+                    className="w-full py-4.5 bg-[#D51F10] hover:bg-[#b01a0d] disabled:bg-gray-200 dark:disabled:bg-gray-800 disabled:text-gray-400 text-white rounded-2xl font-bold text-lg shadow-xl shadow-[#D51F10]/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2 group overflow-hidden relative"
                   >
                     {loading ? (
                       <Loader2 className="w-6 h-6 animate-spin" />
@@ -398,7 +398,7 @@ export default function UnifiedOTPFastLogin() {
                             }
                           }
                         }}
-                        className="w-full h-16 text-center text-3xl font-bold bg-gray-50 dark:bg-gray-900 border-2 border-transparent focus:border-[#7e3866]/50 rounded-2xl outline-none transition-all text-gray-900 dark:text-white shadow-sm"
+                        className="w-full h-16 text-center text-3xl font-bold bg-gray-50 dark:bg-gray-900 border-2 border-transparent focus:border-[#D51F10]/50 rounded-2xl outline-none transition-all text-gray-900 dark:text-white shadow-sm"
                         placeholder="•"
                       />
                     ))}
@@ -407,12 +407,12 @@ export default function UnifiedOTPFastLogin() {
                   <div className="flex flex-col items-center gap-4">
                     <div className="flex items-center gap-2 text-xs font-semibold">
                       {resendTimer > 0 ? (
-                        <span className="text-gray-400">Resend code in <span className="text-[#7e3866]">{formatResendTimer(resendTimer)}</span></span>
+                        <span className="text-gray-400">Resend code in <span className="text-[#D51F10]">{formatResendTimer(resendTimer)}</span></span>
                       ) : (
                         <button
                           type="button"
                           onClick={handleResendOTP}
-                          className="text-[#7e3866] hover:underline"
+                          className="text-[#D51F10] hover:underline"
                         >
                           Didn't receive code? Resend
                         </button>
@@ -422,7 +422,7 @@ export default function UnifiedOTPFastLogin() {
                     <button
                       type="button"
                       onClick={handleEditNumber}
-                      className="text-xs text-gray-400 hover:text-[#7e3866] transition-colors"
+                      className="text-xs text-gray-400 hover:text-[#D51F10] transition-colors"
                     >
                       Edit phone number
                     </button>
@@ -431,7 +431,7 @@ export default function UnifiedOTPFastLogin() {
                   <button
                     type="submit"
                     disabled={loading || otp.length < 4}
-                    className="w-full py-4.5 bg-[#7e3866] hover:bg-[#6a2f56] disabled:bg-gray-200 dark:disabled:bg-gray-800 disabled:text-gray-400 text-white rounded-2xl font-bold text-lg shadow-xl shadow-[#7e3866]/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2"
+                    className="w-full py-4.5 bg-[#D51F10] hover:bg-[#b01a0d] disabled:bg-gray-200 dark:disabled:bg-gray-800 disabled:text-gray-400 text-white rounded-2xl font-bold text-lg shadow-xl shadow-[#D51F10]/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2"
                   >
                     {loading ? <Loader2 className="w-6 h-6 animate-spin" /> : "Verify & Continue"}
                   </button>
@@ -444,7 +444,7 @@ export default function UnifiedOTPFastLogin() {
           <div className="mt-8 text-center">
             <p className="text-[11px] text-gray-400 font-medium leading-relaxed max-w-[320px] mx-auto">
               By continuing, you agree to our <br />
-              <Link to="/food/user/profile/terms" className="text-gray-900 dark:text-white font-bold hover:text-[#7e3866] transition-colors">Terms of Service</Link> & <Link to="/food/user/profile/privacy" className="text-gray-900 dark:text-white font-bold hover:text-[#7e3866] transition-colors">Privacy Policy</Link>
+              <Link to="/food/user/profile/terms" className="text-gray-900 dark:text-white font-bold hover:text-[#D51F10] transition-colors">Terms of Service</Link> & <Link to="/food/user/profile/privacy" className="text-gray-900 dark:text-white font-bold hover:text-[#D51F10] transition-colors">Privacy Policy</Link>
             </p>
           </div>
 
@@ -467,7 +467,7 @@ export default function UnifiedOTPFastLogin() {
           className="sm:max-w-[425px] rounded-3xl border-none p-0 overflow-hidden bg-white dark:bg-[#1a1a1a]"
           showCloseButton={false}
         >
-          <div className="bg-[#7e3866] p-8 text-center relative">
+          <div className="bg-[#D51F10] p-8 text-center relative">
             <div className="absolute top-[-20%] right-[-10%] w-32 h-32 bg-white/10 rounded-full blur-2xl" />
             <motion.div 
               initial={{ scale: 0 }}
@@ -493,7 +493,7 @@ export default function UnifiedOTPFastLogin() {
                   value={newName}
                   onChange={(e) => setNewName(e.target.value)}
                   placeholder="Enter your name"
-                  className="pl-4 h-14 bg-gray-50 dark:bg-gray-800 border-gray-100 dark:border-gray-700 rounded-2xl focus:ring-2 focus:ring-[#7e3866] transition-all group-hover:border-[#7e3866]/30"
+                  className="pl-4 h-14 bg-gray-50 dark:bg-gray-800 border-gray-100 dark:border-gray-700 rounded-2xl focus:ring-2 focus:ring-[#D51F10] transition-all group-hover:border-[#D51F10]/30"
                   autoFocus
                 />
               </div>
@@ -503,7 +503,7 @@ export default function UnifiedOTPFastLogin() {
               <Button 
                 type="submit" 
                 disabled={isUpdatingName}
-                className="w-full h-14 bg-[#7e3866] hover:bg-[#6b2f57] text-white rounded-2xl font-bold text-lg shadow-lg shadow-[#7e3866]/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
+                className="w-full h-14 bg-[#D51F10] hover:bg-[#b01a0d] text-white rounded-2xl font-bold text-lg shadow-lg shadow-[#D51F10]/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
                 {isUpdatingName ? (
                   <Loader2 className="h-5 w-5 animate-spin" />
