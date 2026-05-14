@@ -2335,11 +2335,11 @@ export default function Home() {
     if (heroBannerImages.length === 0) return null;
 
     return (
-      <div className="px-4 py-2">
+      <div className="w-full px-0 py-0 overflow-hidden">
         <div
           ref={heroShellRef}
           data-home-hero-shell="true"
-          className="relative w-full overflow-hidden aspect-[1.7/1] sm:aspect-[1.9/1] lg:aspect-[2.1/1] min-h-[180px] sm:min-h-[220px] lg:min-h-[260px] rounded-2xl shadow-sm group cursor-pointer bg-white"
+          className="relative w-full overflow-hidden aspect-[2/1] rounded-none shadow-none group cursor-pointer bg-transparent border-none"
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
@@ -2599,21 +2599,25 @@ export default function Home() {
         </div>
 
         <div className="md:hidden relative overflow-x-clip bg-white dark:bg-[#0a0a0a]">
-          {/* Brand Top Section (Dark) */}
-          <div className="relative overflow-hidden bg-gradient-to-b from-[#3a142c] to-[#1a0a14] rounded-b-[2rem] shadow-lg mb-2">
-            {festVideoActive && (
-              <div className="absolute inset-0 z-0">
-                <video
-                  src={festBannerVideoUrl}
+          {/* Brand Top Section - Banner IS the background */}
+          <div className="relative w-full overflow-hidden">
+            {/* Banner image fills as absolute background behind header */}
+            {activeTab === "food" && heroBannerImages.length > 0 && (
+              <div className="absolute inset-0 w-full h-full z-0">
+                <img
+                  src={heroBannerImages[currentBannerIndex]}
+                  alt="Hero Banner"
                   className="w-full h-full object-cover"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
+                  draggable={false}
                 />
-                <div className="absolute inset-0 bg-black/40" />
               </div>
             )}
+            {/* Fallback teal bg when no banner */}
+            {!(activeTab === "food" && heroBannerImages.length > 0) && (
+              <div className="absolute inset-0 bg-gradient-to-b from-[#cdf3f7] to-[#9de8ef] z-0" />
+            )}
+
+            {/* Header on top of banner */}
             <div className="relative z-10">
               <HomeHeader
                 activeTab={activeTab}
@@ -2626,16 +2630,12 @@ export default function Home() {
                 vegMode={vegMode}
                 handleVegModeChange={handleVegModeChange}
               />
-
-              {activeTab === "food" && (
-                <FestBanner
-                  isVegMode={vegMode}
-                  videoUrl={festVideoActive ? "" : festBannerVideoUrl}
-                  hideFoodImages={festVideoActive}
-                />
-              )}
             </div>
+
+            {/* Invisible spacer to give the container the banner's aspect-ratio height */}
+            <div className="w-full" style={{ paddingBottom: "56%" }} aria-hidden="true" />
           </div>
+
 
           <AnimatePresence mode="wait">
             {activeTab === "food" ? (
@@ -2799,8 +2799,6 @@ export default function Home() {
                   )}
                 </AnimatePresence>
 
-                {/* Admin Hero Banners Section - Now below categories */}
-                {HeroBannerSection}
 
                 {/* Filters Sticky Sidebar Header */}
                 <section className="py-2.5 px-4 bg-white/95 dark:bg-[#0a0a0a]/95 backdrop-blur-md sticky top-0 z-[40] -mx-4 w-[calc(100%+2rem)] border-b border-gray-100 dark:border-white/5 shadow-sm transition-colors duration-300">
