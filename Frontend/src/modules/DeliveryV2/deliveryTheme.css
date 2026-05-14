@@ -1,19 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@500;600;700;800&family=Sora:wght@600;700&display=swap");
 
 .delivery-v2-theme {
-  --dv-primary: #15498b;
-  --dv-primary-strong: #000000;
-  --dv-primary-soft: #e7effa;
-  --dv-accent: #000000;
+  --dv-primary: #D51F10;
+  --dv-primary-strong: #b01a0d;
+  --dv-primary-soft: #fff5f5;
+  --dv-accent: #b01a0d;
   --dv-surface: #ffffff;
-  --dv-bg: #eef3fb;
+  --dv-bg: #fffbfb;
   --dv-text: #0f1724;
   --dv-muted: #4f5f77;
-  --dv-border: #d1dceb;
+  --dv-border: #f8d7da;
   background:
-    radial-gradient(900px 420px at 92% -5%, #d5e3f7 0%, transparent 52%),
-    radial-gradient(760px 360px at -8% 0%, #e7edf8 0%, transparent 58%),
-    linear-gradient(180deg, #f7faff 0%, #edf2fb 100%);
+    radial-gradient(900px 420px at 92% -5%, #fff5f5 0%, transparent 52%),
+    radial-gradient(760px 360px at -8% 0%, #fff5f5 0%, transparent 58%),
+    linear-gradient(180deg, #fffafa 0%, #fff5f5 100%);
   min-height: 100vh;
   color: var(--dv-text);
   font-family: "Nunito Sans", "Outfit", "Poppins", sans-serif;
@@ -110,7 +110,7 @@
 .delivery-v2-theme .hover\:bg-cyan-600:hover,
 .delivery-v2-theme .hover\:bg-indigo-600:hover,
 .delivery-v2-theme [class*="hover:bg-[#00A055]"]:hover,
-.delivery-v2-theme [class*="hover:bg-[#6a2f56]"]:hover {
+.delivery-v2-theme [class*="hover:bg-[#b01a0d]"]:hover {
   background-color: var(--dv-primary-strong) !important;
 }
 
@@ -166,7 +166,7 @@
 .delivery-v2-theme .from-amber-500,
 .delivery-v2-theme .to-amber-500 {
   --tw-gradient-from: var(--dv-primary) var(--tw-gradient-from-position) !important;
-  --tw-gradient-to: color-mix(in srgb, var(--dv-primary-strong) 82%, #15498b) var(--tw-gradient-to-position) !important;
+  --tw-gradient-to: color-mix(in srgb, var(--dv-primary-strong) 82%, #D51F10) var(--tw-gradient-to-position) !important;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
 }
 
@@ -182,12 +182,12 @@
 
 .delivery-v2-theme .delivery-online-toggle.is-online {
   background-color: var(--dv-primary) !important;
-  --tw-shadow-color: rgb(21 73 139 / 0.32) !important;
+  --tw-shadow-color: rgb(213 31 16 / 0.32) !important;
 }
 
 .delivery-v2-theme .delivery-online-toggle.is-offline {
   background-color: var(--dv-primary-strong) !important;
-  --tw-shadow-color: rgb(0 0 0 / 0.28) !important;
+  --tw-shadow-color: rgb(176 26 13 / 0.28) !important;
 }
 
 .delivery-v2-theme button,
@@ -207,7 +207,7 @@
 .delivery-v2-theme textarea:focus,
 .delivery-v2-theme select:focus {
   border-color: color-mix(in srgb, var(--dv-primary) 55%, #fff) !important;
-  box-shadow: 0 0 0 4px rgb(21 73 139 / 0.15) !important;
+  box-shadow: 0 0 0 4px rgb(213 31 16 / 0.15) !important;
 }
 
 @media (max-width: 900px) {

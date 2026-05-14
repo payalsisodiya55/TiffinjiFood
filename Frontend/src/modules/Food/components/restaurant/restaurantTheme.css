@@ -1,9 +1,9 @@
 .restaurant-theme {
-  --rt-primary: #7e3866;
-  --rt-primary-strong: #55254b;
-  --rt-primary-soft: #f9f0f7;
+  --rt-primary: #D51F10;
+  --rt-primary-strong: #b01a0d;
+  --rt-primary-soft: #fff5f5;
   --rt-surface: #ffffff;
-  --rt-border: #ead6e3;
+  --rt-border: #f8d7da;
   --rt-text: #1f1f24;
   --rt-muted: #6d6470;
   color: var(--rt-text);
@@ -40,7 +40,7 @@
 .restaurant-theme .hover\:bg-amber-600:hover,
 .restaurant-theme .hover\:bg-green-600:hover,
 .restaurant-theme .hover\:bg-emerald-600:hover,
-.restaurant-theme [class*="hover:bg-[#55254b]"]:hover,
+.restaurant-theme [class*="hover:bg-[#b01a0d]"]:hover,
 .restaurant-theme [class*="hover:bg-[#d84f0a]"]:hover,
 .restaurant-theme [class*="hover:bg-[#00A055]"]:hover {
   background-color: var(--rt-primary-strong) !important;
@@ -66,8 +66,8 @@
 .restaurant-theme .bg-orange-500\/10,
 .restaurant-theme .bg-green-500\/10,
 .restaurant-theme .bg-emerald-500\/10,
-.restaurant-theme [class*="bg-[#7e3866]/5"],
-.restaurant-theme [class*="bg-[#7e3866]/10"] {
+.restaurant-theme [class*="bg-[#D51F10]/5"],
+.restaurant-theme [class*="bg-[#D51F10]/10"] {
   background-color: var(--rt-primary-soft) !important;
 }
 
