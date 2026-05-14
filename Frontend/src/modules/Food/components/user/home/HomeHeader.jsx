@@ -91,7 +91,7 @@ export default function HomeHeader({
   return (
     <div className="relative pt-2 pb-0 px-3 transition-all duration-700 overflow-hidden bg-transparent shadow-none">
       {/* Subtle Artistic Glows */}
-      <div className="absolute top-[-20%] right-[-10%] w-48 h-48 bg-[#7e3866]/5 blur-[80px] rounded-full pointer-events-none" />
+      <div className="absolute top-[-20%] right-[-10%] w-48 h-48 bg-[#D51F10]/5 blur-[80px] rounded-full pointer-events-none" />
       <div className="absolute bottom-[-20%] left-[-10%] w-48 h-48 bg-[#48c479]/5 blur-[80px] rounded-full pointer-events-none" />
 
       {/* Main Header Content */}
@@ -103,8 +103,8 @@ export default function HomeHeader({
             className="flex items-center gap-1.5 cursor-pointer group min-w-0 flex-1"
             onClick={handleLocationClick}
           >
-            <div className="bg-[#7e3866]/10 p-1 rounded-lg group-active:scale-95 transition-all">
-              <MapPin className="h-3 w-3 text-[#7e3866] fill-[#7e3866]/20" />
+            <div className="bg-[#D51F10]/10 p-1 rounded-lg group-active:scale-95 transition-all">
+              <MapPin className="h-3 w-3 text-[#D51F10] fill-[#D51F10]/20" />
             </div>
             <div className="flex flex-col min-w-0">
               <div className="flex items-center gap-0.5">
@@ -147,7 +147,7 @@ export default function HomeHeader({
                     <h3 className="font-bold text-gray-900 dark:text-white flex items-center gap-2">
                       Notifications
                       {unreadCount > 0 && (
-                        <Badge variant="secondary" className="bg-orange-100 text-[#7e3866] border-none text-[10px] h-4">
+                        <Badge variant="secondary" className="bg-orange-100 text-[#D51F10] border-none text-[10px] h-4">
                           {unreadCount} New
                         </Badge>
                       )}
@@ -159,7 +159,7 @@ export default function HomeHeader({
                         const Icon = ICON_MAP[notif.icon] || Bell;
                         return (
                           <div key={notif.id} className="p-4 flex items-start gap-3 border-b border-gray-50 dark:border-gray-800 hover:bg-gray-50 transition-colors">
-                            <div className="mt-1 p-2 rounded-full bg-gray-100 text-[#7e3866]">
+                            <div className="mt-1 p-2 rounded-full bg-gray-100 text-[#D51F10]">
                               <Icon className="h-4 w-4" />
                             </div>
                             <div className="flex-1 min-w-0">
@@ -187,7 +187,7 @@ export default function HomeHeader({
               <div className="h-8 w-8 relative flex items-center justify-center rounded-full bg-white border border-gray-200 cursor-pointer active:scale-90 transition-all shadow-sm">
                 <ShoppingBag className="h-4 w-4 text-gray-700" />
                 {cartCount > 0 && (
-                  <span className="absolute -top-1 -right-1 w-4 h-4 bg-[#7e3866] text-white text-[10px] font-bold rounded-full flex items-center justify-center border border-white">
+                  <span className="absolute -top-1 -right-1 w-4 h-4 bg-[#D51F10] text-white text-[10px] font-bold rounded-full flex items-center justify-center border border-white">
                     {cartCount}
                   </span>
                 )}
@@ -208,7 +208,7 @@ export default function HomeHeader({
             className="relative bg-white rounded-2xl flex items-center px-4 py-3 shadow-lg border border-black/5 cursor-pointer active:scale-[0.98] transition-all duration-300 flex-1"
             onClick={handleSearchFocus}
           >
-            <Search className="h-4.5 w-4.5 text-[#7e3866] mr-2 shrink-0" strokeWidth={3} />
+            <Search className="h-4.5 w-4.5 text-[#D51F10] mr-2 shrink-0" strokeWidth={3} />
             
             <div className="flex-1 overflow-hidden relative h-5">
               <AnimatePresence mode="wait">
@@ -228,7 +228,7 @@ export default function HomeHeader({
             <div className="flex items-center gap-2 pl-2">
               <div className="h-4 w-[1px] bg-gray-200" />
               <Mic 
-                className="h-4.5 w-4.5 text-[#7e3866]" 
+                className="h-4.5 w-4.5 text-[#D51F10]" 
                 onClick={(e) => {
                   e.stopPropagation();
                   handleSearchFocus?.();
